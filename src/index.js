@@ -1,15 +1,15 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const connect_db = require("./src/config/db.js");
+const connect_db = require("./config/db.js");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsdoc = require("swagger-jsdoc");
-const AuthRoutes = require("./src/routes/user.js");
-const GroupRoutes = require("./src/routes/group.js");
-const projectRoutes = require("./src/routes/Project.js")
-const companyRoutes = require("./src/routes/company.js");
-const commitRoutes = require("./src/routes/commit.js");
-const fileRoutes = require("./src/routes/file.js");
+const AuthRoutes = require("./routes/user.js");
+const GroupRoutes = require("./routes/group.js");
+const projectRoutes = require("./routes/Project.js")
+const companyRoutes = require("./routes/company.js");
+const commitRoutes = require("./routes/commit.js");
+const fileRoutes = require("./routes/file.js");
 dotenv.config();
 
 const app = express();
