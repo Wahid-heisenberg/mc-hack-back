@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Email Verification</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #63a1e3;
+            color: #000000;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #5b95d4;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+        }
+        .link {
+            color: #fff;
+            text-decoration: none;
+            font-size: large;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello {{email}}!</h1>
+        
+        <p>Thank you for signing up for the we doc . Please click the button below to verify your email address:</p>
+        <p>This email is valid for <strong>thirty minutes</strong>.</p>
+        <button class="btn"><a class="link" href="http://192.168.213.153:5000/api/v1/users/verify/{{token}}">Verify My Account</a></button>
+        
+    
+        <div class="footer">
+            <p>If you did not sign up for this service, you can ignore this email.</p>
+            <p>This email was sent by we doc . Please do not reply to this email.</p>
+        </div>
+    </div>
+</body>
+</html>
