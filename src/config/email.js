@@ -4,6 +4,7 @@ const path = require("path");
 const dotenv = require("dotenv");
 dotenv.config();
 
+
 let transporter = nodemailer.createTransport({
   service: "gmail",
   host: "smtp.gmail.com",
@@ -18,10 +19,10 @@ let transporter = nodemailer.createTransport({
 
 const handlebarOptions = {
   viewEngine: {
-    partialsDir: path.resolve("./views/"),
+    partialsDir: path.resolve("./src/views/"),
     defaultLayout: false,
   },
-  viewPath: path.resolve("./views/"),
+  viewPath: path.resolve("./src/views/"),
 };
 
 transporter.use("compile", hbs(handlebarOptions));

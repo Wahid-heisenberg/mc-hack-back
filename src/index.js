@@ -10,6 +10,7 @@ const projectRoutes = require("./routes/Project.js")
 const companyRoutes = require("./routes/company.js");
 const commitRoutes = require("./routes/commit.js");
 const fileRoutes = require("./routes/file.js");
+const path = require("path");
 dotenv.config();
 
 const app = express();
@@ -43,7 +44,8 @@ app.use(express.json());
 // app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
   
-  app.set("view engine", "hbs");
+app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "views"));
   
   app.use("/api/v1/users", AuthRoutes);
   app.use("/api/v1/groups", GroupRoutes);
